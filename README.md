@@ -17,36 +17,25 @@ The core application is `app.py`, a Streamlit web app that:
 - `requirements.txt` — Python dependencies for the project
 - `Object_Detection.ipynb` — notebook with project exploration and package installation examples
 - `yolo_model.ipynb` — additional notebook for YOLO model work and experimentation
-- `.vscode/settings.json` — local VS Code settings to configure the workspace Python interpreter
 
-## Requirements
+## Things i learned in this project
 
-Install the required packages in the same virtual environment used to run the app.
+ + I learned what is YOLO model
+ + What is the difference between YOLO and CNN
+ + How to train the model on external datasets
+ + How different parameter changes affect the training process such as epochs and conf 
+ + How to use OpenCV library 
+ + How to use Streamlit
 
-```bash
-pip install -r requirements.txt
-```
+## Future functionality 
+ + An information card that displays some extra info about the object 
+ + Detecion can be used to identify the user of a certain device in order to prevent them opening some restricted folder that only the user can access
+ + Can be scaled to a phone detection app for exam surveilence or other places where phones are not allowed
 
-Key dependencies include:
-- `ultralytics`
-- `opencv-python`
-- `streamlit`
-- `torch`
-- `torchvision`
+## Difficulty i faced 
+ + Choosing the wrong dataset that caused wrong detection such as identifying a banana as an apple
+ + Choosing google COLAB to train because of GPU limitations on system 
+ + Resolving current dependecies and python version 
 
-## Running the App
 
-From the repository root, start the Streamlit app:
 
-```bash
-python -m streamlit run app.py
-```
-
-Open the local URL shown in the terminal to use the app.
-
-## Notes
-
-- The app expects the model weights file at `Models/best.pt`.
-- If `ultralytics` or `cv2` are underlined in VS Code, the editor may be using a different Python interpreter than the terminal.
-- Make sure the active interpreter points to the project virtual environment and that `requirements.txt` packages are installed there.
-- If needed, reload VS Code or restart the Python language server after selecting the correct interpreter.
