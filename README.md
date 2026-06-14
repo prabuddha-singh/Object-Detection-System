@@ -10,6 +10,14 @@ The core application is `app.py`, a Streamlit web app that:
 - runs YOLO inference on each frame
 - displays annotated frames with bounding boxes and class labels
 
+## Development Pipeline
+1. Define project goals and collect dataset requirements from roboflow
+2. Prepare dataset file
+3. Train the YOLO model and validate results on google COLAB
+4. Build the Streamlit app with webcam capture and inference
+5. Test the application locally and refine performance
+6. Deploy and monitor the object detection system
+
 ## Repository Contents
 
 - `app.py` — main Streamlit app for real-time webcam object detection
